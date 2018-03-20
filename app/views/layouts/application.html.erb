@@ -11,9 +11,9 @@
   <body>
     <header>
       <ul>
-      <%= link_to 'トップ画面'
-      <%= link_to '新規作成'
-      <%= link_to 'ブログ一覧',
+      <%= link_to 'トップ画面', root_path %>
+      <%= link_to '新規作成', new_blog_path %>
+      <%= link_to 'ブログ一覧', blogs_path %>
                 </header>
     <%= yield %>
     <footer>
