@@ -8,7 +8,11 @@
 <section class="recentry">
   <% i = 0 %>
   <% 3.times do %>
-    <%= @blogs[i].title %>
+    <tr>
+      <td><%= @blogs[i].title %></td>
+      <td><%= @blogs[i].content %></td>
+    </tr>
+    <% i += 1 %>
   <% end %>
 </section>
 <section class="function">
