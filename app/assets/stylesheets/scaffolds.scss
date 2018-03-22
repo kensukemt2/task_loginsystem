@@ -5,6 +5,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  height: 100%;
 }
 
 p, ol, ul, td {
@@ -83,9 +84,7 @@ label {
   display: block;
 }
 .wrap{
-  min-height: 100%;
-  height: auto;
-  position: relative;
+
 }
 .footer{
   position: absolute;
@@ -94,6 +93,8 @@ label {
   height: 100px;
   bottom: 0;
   display: table;
+  text-align: center;
+
 }
 // .footer p {
 //   font-size: 1rem;
@@ -104,8 +105,11 @@ label {
 // }
 .container {
   width: auto;
-  max-width: 680px;
   padding: 0 15px;
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto -100px;
 }
 .container .text-muted {
   margin: 20px 0;
