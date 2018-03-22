@@ -1,3 +1,7 @@
 .navbar{
-  background-color: #1DA1F2
+  background-color: #1DA1F2;
+  color: #000000;
+}
+.navbar-collapse{
+  color: #f0f0f0;
 }
