@@ -9,23 +9,24 @@
 
   <div class="row">
     <section class="recentry col-md-3">
-      最近の更新状況
-      <table>
-        <tr class="blog_list">
-          <td>タイトル</td>
-          <td>内容</td>
-        </tr>
+      <div>
+        最近の更新状況
+        <table>
+          <tr class="blog_list">
+            <td>タイトル</td>
+            <td>内容</td>
+          </tr>
 
-        <% i = 0 %>
-        <% 3.times do %>
-
-        <tr class=blog_list>
-          <td><%= @blogs[i].title %></td>
-          <td><%= @blogs[i].content %></td>
-        </tr>
-        <% i += 1 %>
-      <% end %>
-    </table>
+          <% i = 0 %>
+          <% 3.times do %>
+            <tr class=blog_list>
+              <td><%= @blogs[i].title %></td>
+              <td><%= @blogs[i].content %></td>
+            </tr>
+              <% i += 1 %>
+          <% end %>
+        </table>
+      </div>
     </section>
 
     <section class="new_blog_img col-md-3">
