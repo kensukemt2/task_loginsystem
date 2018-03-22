@@ -134,18 +134,22 @@ body {
 }
 .recentry{
   border-style: solid;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 1rem;
+  padding: 1rem;
 }
 .recentry td,th{
-  font-size: 3rem;
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;  
 }
 .blogs_img{
   border-style: solid;
   margin:1rem;
+  padding: 1rem;
 }
 .blogs_img p{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .blogs_img img{
   width:100%;
@@ -153,9 +157,10 @@ body {
 .new_blog_img{
   border-style: solid;
   margin: 1rem;
+  padding: 1rem;
 }
 .new_blog_img p{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .new_blog_img img{
   width: 100%;
