@@ -1,10 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-
+  before_action :read_blog, only:[:index, :top]
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
   end
 
   # GET /blogs/1
@@ -60,7 +59,6 @@ class BlogsController < ApplicationController
     render :new if @blog.invalid?
   end
   def top
-    @blog = Blog[0]
   end
 
   private
@@ -72,5 +70,8 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :content)
+    end
+    def read_blog
+      @blogs = Blog.all
     end
 end
