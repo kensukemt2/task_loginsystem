@@ -6,7 +6,7 @@
   <P>このアプリはブログアプリです。</P>
 </section>
 <section class="recentry">
-  <%= @blogs[0] %>
+  <%= @blogs[0].title %>
 </section>
 <section class="function">
   <%= link_to image_tag('new_blog.jpg',{:alt => 'ブログ新規作成画面はこちら'}), new_blog_path %>
