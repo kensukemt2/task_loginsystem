@@ -1,30 +1,38 @@
 <section class="main-header">
   <%= image_tag 'title_test.png' %>
 </section>
-<section class="TOP">
-  <h1>トップ画面</h1>
-  <P>このアプリはブログアプリです。</P>
-</section>
-<section class="recentry">
-  最近の更新状況
-  <table>
-    <tr class="blog_list">
-      <td>タイトル</td>
-      <td>内容</td>
-    </tr>
+<div class="container">
+  <section class="TOP">
+    <h1>トップ画面</h1>
+    <P>このアプリはブログアプリです。</P>
+  </section>
+  <div class="row">
+    <section class="recentry col-md-4">
+      最近の更新状況
+      <table>
+        <tr class="blog_list">
+          <td>タイトル</td>
+          <td>内容</td>
+        </tr>
 
-    <% i = 0 %>
-    <% 3.times do %>
+        <% i = 0 %>
+        <% 3.times do %>
 
-    <tr class=blog_list>
-      <td><%= @blogs[i].title %></td>
-      <td><%= @blogs[i].content %></td>
-    </tr>
-    <% i += 1 %>
-  <% end %>
-</table>
-</section>
-<section class="function">
-  <%= link_to image_tag('new_blog.jpg',{:alt => 'ブログ新規作成画面はこちら'}), new_blog_path %>
-  <%= link_to image_tag('blogs.jpg',{:alt => 'ブログ一覧画面はこちら'}), blogs_path %>
-</section>
+        <tr class=blog_list>
+          <td><%= @blogs[i].title %></td>
+          <td><%= @blogs[i].content %></td>
+        </tr>
+        <% i += 1 %>
+      <% end %>
+    </table>
+    </section>
+    <section class="new_blog_img col-md-4">
+      <p>ブログ新規作成画面はこちら</p>
+      <%= link_to image_tag('new_blog.jpg',{:alt => 'ブログ新規作成画面はこちら'}), new_blog_path %>
+    </section>
+    <section class="blogs_img col-md-4">
+      <p>ブログの一覧はこちら</p>
+      <%= link_to image_tag('blogs.jpg',{:alt => 'ブログ一覧画面はこちら'}), blogs_path %>
+    </section>
+  </div>
+</div>
