@@ -6,8 +6,9 @@
     <h1>トップ画面</h1>
     <P>このアプリはブログアプリです。</P>
   </section>
+
   <div class="row">
-    <section class="recentry col-md-4">
+    <section class="recentry col-md-3">
       最近の更新状況
       <table>
         <tr class="blog_list">
@@ -26,13 +27,16 @@
       <% end %>
     </table>
     </section>
-    <section class="new_blog_img col-md-4">
+
+    <section class="new_blog_img col-md-3">
       <p>ブログ新規作成画面はこちら</p>
       <%= link_to image_tag('new_blog.jpg',{:alt => 'ブログ新規作成画面はこちら'}), new_blog_path %>
     </section>
-    <section class="blogs_img col-md-4">
+
+    <section class="blogs_img col-md-3">
       <p>ブログの一覧はこちら</p>
       <%= link_to image_tag('blogs.jpg',{:alt => 'ブログ一覧画面はこちら'}), blogs_path %>
     </section>
+
   </div>
 </div>

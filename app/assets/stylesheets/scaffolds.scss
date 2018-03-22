@@ -134,24 +134,28 @@ body {
 }
 .recentry{
   border-style: solid;
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 1rem;
 }
-.recentry table{
+.recentry td,th{
   font-size: 3rem;
 }
 .blogs_img{
   border-style: solid;
-  font-size: 3rem;
   margin:1rem;
+}
+.blogs_img p{
+    font-size: 3rem;
 }
 .blogs_img img{
   width:100%;
 }
 .new_blog_img{
   border-style: solid;
-  font-size: 3rem;
   margin: 1rem;
+}
+.new_blog_img p{
+    font-size: 3rem;
 }
 .new_blog_img img{
   width: 100%;
