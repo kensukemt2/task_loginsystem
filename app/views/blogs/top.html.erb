@@ -7,13 +7,15 @@
 </section>
 <section class="recentry">
   最近の更新状況
-  <tr class="blog_title">
-    <td>タイトル</td>
-    <td>内容</td>
-  </tr>
-  <% i = 0 %>
-  <% 3.times do %>
   <table>
+    <tr class="blog_list">
+      <td>タイトル</td>
+      <td>内容</td>
+    </tr>
+
+    <% i = 0 %>
+    <% 3.times do %>
+
     <tr class=blog_list>
       <td><%= @blogs[i].title %></td>
       <td><%= @blogs[i].content %></td>
