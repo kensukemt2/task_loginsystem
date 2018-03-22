@@ -8,12 +8,14 @@
 <section class="recentry">
   <% i = 0 %>
   <% 3.times do %>
+  <table>
     <tr>
       <td><%= @blogs[i].title %></td>
       <td><%= @blogs[i].content %></td>
     </tr>
     <% i += 1 %>
   <% end %>
+</table>
 </section>
 <section class="function">
   <%= link_to image_tag('new_blog.jpg',{:alt => 'ブログ新規作成画面はこちら'}), new_blog_path %>
