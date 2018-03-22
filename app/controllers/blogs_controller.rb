@@ -60,7 +60,7 @@ class BlogsController < ApplicationController
     render :new if @blog.invalid?
   end
   def top
-    @blogs = Blog.all
+    @blog = Blog[0]
   end
 
   private
