@@ -8,36 +8,41 @@
   </section>
 
   <div class="row">
-    <section class="recentry col-md-4">
-      <div>
-        最近の更新状況
-        <table>
-          <tr class="blog_list">
-            <td>タイトル</td>
-            <td>内容</td>
-          </tr>
-
-          <% i = 0 %>
-          <% 3.times do %>
-            <tr class=blog_list>
-              <td><%= @blogs[i].title %></td>
-              <td><%= @blogs[i].content %></td>
+    <div class="col-md-4">
+      <section class="recentry">
+        <div>
+          最近の更新状況
+          <table>
+            <tr class="blog_list">
+              <td>タイトル</td>
+              <td>内容</td>
             </tr>
-              <% i += 1 %>
-          <% end %>
-        </table>
-      </div>
-    </section>
 
-    <section class="new_blog_img col-md-4">
-      <p>ブログ新規作成画面はこちら</p>
-      <%= link_to image_tag('new_blog.jpg'), new_blog_path %>
-    </section>
+            <% i = 0 %>
+            <% 3.times do %>
+              <tr class=blog_list>
+                <td><%= @blogs[i].title %></td>
+                <td><%= @blogs[i].content %></td>
+              </tr>
+                <% i += 1 %>
+            <% end %>
+          </table>
+        </div>
+      </section>
+    </div>
 
-    <section class="blogs_img col-md-4">
-      <p>ブログの一覧はこちら</p>
-      <%= link_to image_tag('blogs.jpg'), blogs_path %>
-    </section>
+    <div class="col-md-4">
+      <section class="new_blog_img col-md-4">
+        <p>ブログ新規作成画面はこちら</p>
+        <%= link_to image_tag('new_blog.jpg'), new_blog_path %>
+      </section>
+  </div>
+    <div class="col-md-4">
+      <section class="blogs_img">
+        <p>ブログの一覧はこちら</p>
+        <%= link_to image_tag('blogs.jpg'), blogs_path %>
+      </section>
+    </div>
 
   </div>
 </div>
