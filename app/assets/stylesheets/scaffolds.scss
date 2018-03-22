@@ -101,7 +101,14 @@ label {
   vertical-align: middle;
   display: table-cell;
 }
-
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
 .main-header{
   padding-bottom: 15%;
   width: 100%;
