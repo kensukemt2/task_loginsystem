@@ -16,9 +16,9 @@
       <tr class="blog_list">
         <td><%= blog.title %></td>
         <td><%= blog.content %></td>
-        <td><%= link_to '詳細を確認する', blog %></td>
-        <td><%= link_to 'ブログを編集する', edit_blog_path(blog) %></td>
-        <td><%= link_to 'ブログを破棄する', blog, method: :delete, data: { confirm: "本当に削除してよいですか" } %></td>
+        <td><%= link_to '詳細を確認する', blog type: "button",class: "btn btn-primary" %></td>
+        <td><%= link_to 'ブログを編集する', edit_blog_path(blog),type: "button",class: "btn btn-success" %></td>
+        <td><%= link_to 'ブログを破棄する', blog, method: :delete, data: { confirm: "本当に削除してよいですか" },type: "button",class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
