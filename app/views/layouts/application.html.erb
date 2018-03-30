@@ -33,7 +33,7 @@
                 <%= link_to 'トップ画面', root_path,type: "button", class: "btn btn-warning btn-lg" %>
                 <%= link_to '新規作成', new_blog_path,type: "button", class: "btn btn-warning btn-lg" %>
                 <%= link_to 'ブログ一覧', blogs_path,type: "button", class: "btn btn-warning btn-lg" %>
-                <%= link_to 'ログアウトする', sessions_path(current_user.id), method: :delete, type: "button", class: "btn btn-warning btn-lg" %>
+                <%= link_to 'ログアウトする', session_path(current_user.id), method: :delete, type: "button", class: "btn btn-warning btn-lg" %>
               </ul>
               </ul>
             </div>
