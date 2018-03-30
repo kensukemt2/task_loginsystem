@@ -1,3 +1,6 @@
 <h1><%= @user.name %>のページ</h1>
 
 <p>メールアドレス: <%= @user.email %></p>
+
+<p><%= link_to "ブログの新規作成画面",new_blog_path %></p>
+<p><%= link_to "ブログの一覧を見る", blogs_path %></p>
