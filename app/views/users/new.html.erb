@@ -2,7 +2,7 @@
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluraize(@user.error.count, "error") %>prohibited this @user from being saved:</h2>
+    <h2><%= pluraize(@user.errors.count, "error") %>prohibited this @user from being saved:</h2>
     <ul>
       <% @user.errors.full_message.each do |message| %>
         <li><%= message %></li>
