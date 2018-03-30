@@ -64,7 +64,7 @@ class BlogsController < ApplicationController
 
   def force_top
     if current_user.nil?
-      redirect_to 'blogs#top'
+      redirect_to new_session_path, notice: "ログインしてください"
     end
   end
 
