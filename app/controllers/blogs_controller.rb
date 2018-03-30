@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :read_blog, only:[:index, :top]
+  before_action :force_top, only:[:new, :edit, :show]
   # GET /blogs
   # GET /blogs.json
   def index
@@ -59,6 +60,12 @@ class BlogsController < ApplicationController
     render :new if @blog.invalid?
   end
   def top
+  end
+
+  def force_top
+    if current_user.nil?
+      redirect_to 'blogs#top'
+    end
   end
 
   private
