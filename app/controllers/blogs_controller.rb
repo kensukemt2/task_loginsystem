@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :read_blog, only:[:index, :top]
-  before_action :force_top, only:[:new, :edit, :show]
+  before_action :force_top, only:[:new, :edit, :show, :index]
   # GET /blogs
   # GET /blogs.json
   def index
