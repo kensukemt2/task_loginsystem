@@ -6,7 +6,6 @@
     <h1>トップ画面</h1>
     <P>このアプリはブログアプリです。</P>
     <p>ブログの新規作成とブログの一覧画面から編集削除などができます</p>
-    <p>
   </section>
 
   <div class="row">
@@ -38,13 +37,13 @@
     <div class="col-md-4 col-sm-6">
       <section class="new_blog_img">
         <p>ブログ新規ユーザー登録画面はこちら</p>
-        <%= link_to image_tag('new_blog.jpg'), new_blog_path %>
+        <%= link_to image_tag('new_blog.jpg'), new_user_path %>
       </section>
   </div>
     <div class="col-md-4 col-sm-6">
       <section class="blogs_img">
-        <p>ブログの一覧はこちら</p>
-        <%= link_to image_tag('blogs.jpg'), blogs_path %>
+        <p>ログインはこちら</p>
+        <%= link_to image_tag('blogs.jpg'), new_session_path %>
       </section>
     </div>
 
