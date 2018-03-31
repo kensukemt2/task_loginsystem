@@ -4,7 +4,7 @@
 
 <p>内容:<%= @blog.content %></p>
 
-<%= link_to 'ブログ編集画面へ', edit_blog_path(@blog) %> |
+<%= link_to 'ブログ編集画面へ', edit_blog_path(@blog) %>
 <%= link_to 'ブログ一覧に戻る', blogs_path %>
 <%= unless @blog.user == current_user %>
   <% if @favorite.present? %>
@@ -12,4 +12,4 @@
   <% else %>
     <%= link_to 'お気に入りする', favorite_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
   <% end %>
-<% end %>     
+<% end %>
