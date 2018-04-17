@@ -31,6 +31,11 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
+    @cache = params[:cache][:image]
+    if @cache.empty?
+    else
+      @blog.image.retrieve_from_cache! @cache
+    end
     if @blog.save
       BlogMailer.blog_mail(@blog).deliver
       redirect_to @blog, notice: "ブログが作成されました"
@@ -79,7 +84,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content, :image)
     end
     def read_blog
       @blogs = Blog.all
